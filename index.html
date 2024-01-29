@@ -114,6 +114,7 @@
     </div>
 
     <script>
+      const apiKey = process.env.OPENAI_API_KEY;
       const submitBtn = document.querySelector(".submit-translate-btn");
       const languageSelect = document.getElementById("languageSelect");
       const inputText = document.getElementById("inputText");
@@ -144,8 +145,7 @@
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              Authorization:
-                "Bearer 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",
+              Authorization: `Bearer ${apiKey}`,
             },
 
             body: JSON.stringify({
