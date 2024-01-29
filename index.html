@@ -111,10 +111,11 @@
       <div class="copy-wrapper">
         <button id="copyButton" style="display: none">Copy</button>
       </div>
+      <div id="apiKey" data-api-key="${{ secrets.OPENAI_API_KEY }}"></div>
     </div>
 
     <script>
-      const apiKey = process.env.OPENAI_API_KEY;
+      const apiKey = document.getElementById("apiKey").dataset.apiKey;
       const submitBtn = document.querySelector(".submit-translate-btn");
       const languageSelect = document.getElementById("languageSelect");
       const inputText = document.getElementById("inputText");
